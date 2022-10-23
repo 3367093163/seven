@@ -1,0 +1,11 @@
+ /* USER CODE BEGIN Init */
+	uint8_t Senbuff[] = "\r\n**** Serial Output Message by DMA ***\r\n   UART DMA Test \r\n   Zxiaoxuan";  //定义数据发送数组
+  /* USER CODE END Init */
+
+  while (1)
+  {
+    /* USER CODE END WHILE */
+			HAL_UART_Transmit_DMA(&huart1, (uint8_t *)Senbuff, sizeof(Senbuff));
+	        HAL_Delay(1000);
+    /* USER CODE BEGIN 3 */
+  }
