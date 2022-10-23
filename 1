@@ -1,0 +1,9 @@
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
+	GPIO_PinState b0_pin = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_0);  // 读取b0的状态
+	switch (GPIO_Pin){
+		case GPIO_PIN_0:
+			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, b0_pin);  // 将a2写入与b0相同的电位
+			break;
+	}
+	
+}
